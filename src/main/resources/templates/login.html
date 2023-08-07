@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html xmlns:th="http://wwww.thymeleaf.org">
+	<head th:replace="shared_layout::html_head"/>
+	<head>
+		<link rel="stylesheet" href="CSS/indexPage.css"  />
+	</head>
+	<body>
+		<div th:replace="shared_layout :: menu"></div>
+		<div th:replace="shared_layout:: logo_menu"></div>
+		<div class="container">
+			<div class="row">
+				<div class="col-lg-8">
+				
+				</div>
+				<div class="col-lg-4 sr-form">
+					<h3>Login</h3>
+					<hr class="login-hr">
+					<form th:action="@{/studentLogin}" method="POST" >
+						<h6 style="color:red" th:text="${message}"></h6>
+						<div class="form-group">
+	    			   		<input type="text" class="form-control" id="userName" name="userName" placeholder="Enter Email or Mobile" required/>
+	  			   		</div>
+						<div class="form-group">
+	    			   		<input type="password" class="form-control" id="password" name="password" placeholder="Enter Password" required/>
+	  			   		</div>
+	  			   		<button type="submit" class="btn btn-dark">Login</button>
+	  			   		<p style="margin-top:20px;">Don't have a Account ?
+		  			   		<a href="/tutorRegister" class="Login-or-register-link">Join As Tutor</a> or
+		  			   		<a href="/studentRegister" class="Login-or-register-link">I Need A Tutor</a> 
+	  			   		</p>
+	  			   	</form>					
+				</div>
+			</div>
+			
+		</div>
+		
+		<div th:replace="shared_layout::footer"></div>		
+	</body>
+</html>

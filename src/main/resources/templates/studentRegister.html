@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head th:replace="shared_layout::html_head"/>
+<head>
+	<link rel="stylesheet" href="CSS/indexPage.css"  />
+	<script defer src="../static/JavaScript/StudentFormValidation.js"></script>
+</head>
+<body>
+	<div th:replace="shared_layout::menu"></div>
+	<div th:insert="shared_layout::logo_menu"></div>
+	<div class="container">
+		<div class="row apna-class">
+			<div class="col-lg-8 ">
+				<div class="row">
+					<h4>Find Best Home Tutor</h4>
+				</div>
+				<div class="row">
+					<img class="home-tuiton-img" src="Image/home-tuition.png"/>
+				</div>
+				<div class="row apna-class-h4">
+					<h4>Home Tuition is the #1 secret of ACADEMIC EXCELLENCE</h4>
+				</div>
+			</div>	
+			<div class="col-lg-4 sr-form">
+				<!-- <div><a href="/studentRegister">
+					<input type="radio" id="radio1" name="radio1"  checked="checked"/>				
+				</a>
+				<small style="text-align:center;">As Student/Parent</small>	
+				<a href="/tutorRegister">
+					<input type="radio" id="radio1" name="radio1"/>				
+				</a>
+				<small style="text-align:center;">Tutor</small>	
+				</div>-->
+				<form id="form" th:action="@{/saveStudent}" method="post" th:object="${student}" class="needs-validation" novalidate>
+					<h4>Register As Student</h4>
+					<h5 style="color:red" th:text="${message}"></h5>
+					<div class="form-group">
+    			  		<label for="exampleInputName">Name</label>
+    			   		<input type="text" class="form-control" id="name" name="name" required />
+    			   		<div class="invalid-feedback">can't be empty</div>
+  			   		</div>
+  			   		<div class="form-group">
+  			   		    <label for="gender">Gender</label>
+	  			   		<div class="form-check-inline form-check">			   				
+  			   				<input type="radio" class="form-check-input" id="gender" name="gender" value="male" required />
+  			   				<label for="gender" class="form-check-label">Male</label>
+  			   			</div>
+	  			   		<div class="form-check-inline form-check">
+  			   				<input type="radio" class="form-check-input" id="gender" name="gender" value="female" required />
+  			   				<label for="gender" class="form-check-label">Female</label>
+  			   			</div>  
+  			   			<div class="invalid-feedback">can't be empty</div>			   						   		
+  			   		</div>
+ 			   		<div class="form-group">
+    					<label for="mobile">Mobile Number</label>
+    					<input type="text" class="form-control" id="mobile" name="mobile" maxlength="10" required />
+    					
+    					<div class="invalid-feedback">can't be empty</div>
+  			   		</div>
+  			 		<div class="form-group">
+    					<label for="email">Email</label>
+    					<input type="email" class="form-control" id="email" name="email" required />
+    					<div class="invalid-feedback">can't be empty</div>
+  			 		</div>
+  			 		<div class="form-group">
+    					<label for="email">PinCode</label>
+    					<input type="text" class="form-control" id="pincode" name="pincode" minlength="6" maxlength="6" required />
+    					<div class="invalid-feedback">can't be empty</div>
+  			 		</div>
+  			 		<div class="form-group">
+    					<label for="area">Area</label>
+    					<input type="text" class="form-control" id="area" name="area" required />
+    					<div class="invalid-feedback">can't be empty</div>
+  			 		</div>
+ 			 		<div class="form-group"> 
+    					<label for="password">Password</label>
+    					<input type="password" class="form-control" id="password" name="password" required/>
+    					<div class="invalid-feedback">can't be empty</div>
+  					</div>  			
+ 	 				<button type="submit" class="btn btn-dark">Submit</button>
+ 	 				<p style="margin-top:20px;"><a href="/login" class="Login-or-register-link">Already have a account?</a> </p>
+				</form>
+			
+			</div>	
+		
+		</div>
+	</div>
+	<div th:replace="shared_layout::footer"></div>
+	
+	<script>
+// Example starter JavaScript for disabling form submissions if there are invalid fields
+(function() {
+  'use strict';
+  window.addEventListener('load', function() {
+    // Fetch all the forms we want to apply custom Bootstrap validation styles to
+    var forms = document.getElementsByClassName('needs-validation');
+    // Loop over them and prevent submission
+    var validation = Array.prototype.filter.call(forms, function(form) {
+      form.addEventListener('submit', function(event) {
+        if (form.checkValidity() === false) {
+          event.preventDefault();
+          event.stopPropagation();
+        }
+        form.classList.add('was-validated');
+      }, false);
+    });
+  }, false);
+})();
+</script>
+</body>
+</html>
