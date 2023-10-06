@@ -1,0 +1,49 @@
+@charset "ISO-8859-1";
+
+
+.sr-form{
+	background-color:#e9ecef;
+	color:black;
+	
+}
+
+input{
+	
+	border-radius: 8px;
+}
+
+input:focus{
+	outline: 0;
+}
+
+.tr-form-input-fields{
+	margin:10px;
+}
+.home-tuiton-img{
+    width: 540px;
+    height: 320px;
+}
+.apna-class{
+	border:2px solid rgb(255, 255, 255);
+	padding:20px;
+}
+.apna-class-h4{
+	margin-top:30px;
+	color:green;
+}
+
+form p{
+	margin:0px;
+}
+
+h3{
+	text-align: center;
+}
+
+.login-hr{
+	color:white;
+}
+form p a{
+	text-decoration: none;
+	color:#c10d0d;
+}

@@ -1,0 +1,201 @@
+<!doctype html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+  <head th:replace="shared_layout :: html_head" />
+<!--     Required meta tags
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    Bootstrap CSS
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css" integrity="sha384-xOolHFLEh07PJGoPkLv1IbcEPTNtaed2xpHsD9ESMhqIYd0nLMwNLD69Npy4HI+N" crossorigin="anonymous">
+	<link rel="stylesheet" href="CSS/ht_stylsheet.css"/>
+    <title>Home Tutor</title>11
+  </head> -->
+  <body>
+  	<div th:replace="shared_layout :: menu"></div>	
+	<div class="row">
+		<div class="col-lg-4">
+		
+		</div>
+		<div class="col-lg-6">
+			<a href="#">
+				<img src="Image/logo2.jpeg">				
+			</a>
+			<span>Learn & Achieve!!</span>
+			<h5>We Help Students and Tutors To Find Each Other</h5>
+		</div>
+	</div>
+	<div class="container search-container">
+		<form th:action="@{search-tutor-tuition}" method="post">
+			<div class="row">
+			<div class="col-12">
+			 	<h4>Search Your Area for Tuition/Tutor </h4>
+			</div>
+			
+				<div class="col-md-2 form-group">
+					<select class="form-control" name="tutor_tuition" id="tutor_tuition" required="required">
+						<option selected="selected">--select--</option>
+						<option id="selectByTutorOrTuition" name="tutor_tuition" value="Tuition">Tuition</option>
+						<option id="selectByTutorOrTuition" name="tutor_tuition" value="Tutor" >Tutor</option>
+					</select>
+				</div>
+				<div class="col-md-2 form-group">
+					<input type="text" class="form-control" name="city" id="city" placeholder="Search by City"/>
+	 			</div>
+				<div class="col-md-6 form-group">
+					<input type="text" class="form-control" name="course_subject" placeholder="Enter subject or Course"/>
+				</div>
+				<div class="col-md-2 form-group">
+				<i class="bi bi-search"></i>
+					<button type="submit" class="form-control" value="Search">Search</button>
+				</div>	
+			</div>
+		</form>
+	</div>
+	<div class="row why-home-tuition">
+			<div class="col-lg-5">
+				<hr>
+			</div>
+			<div class="col-lg-2">
+				<header>Why Home Tuition?</header>		
+			</div>
+			<div class="col-lg-5">
+				<hr>
+			</div>
+	</div>
+	<div class="row why-home-tuition student-tutor">
+		<div class="col-md-6">
+			<div>
+				<p style="text-align: center;"><b>Students/Parents</b></p>
+			</div>
+			<div>
+				<p><b>1</b>.Home Tuition is #1 Secret of Success. Its a well known fact that home tuition helps students to succeed. Home tutors provide personalized attention.</p>
+			</div>	
+			<div>
+				<p><b>2.</b>Expert one-to-one guidance from home tutors helps students. Here student gets 100% attention and can ask doubts without any hesitation.</p>
+			</div>
+			<div>
+				<p><b>3</b>.Guided students learn & achieve Better Grades! Numerous students have benefitted from expert guidance from home tutors.</p>
+			</div>			
+		</div>
+		<div class="col-md-6">
+			<div>
+				<p  style="text-align: center;">
+					<b>Tutors</b>
+				</p>
+			</div>
+			<div>
+				<p><b>1</b>.Be your own Boss!!! You concentrate on teaching students as home tutor and we help you find home tuition needs (part time teaching jobs) posted by students.</p>
+			</div>	
+			<div>
+				<p><b>2</b>.Home Tuition is Flexible and Rewarding. Teach as home tutor at your convenient timings. Few hours of home tutoring a day can help you earn decent income.</p>
+			</div>
+			<div>
+				<p><b>3</b>.Home tutoring is the best part time job option. Thousands of parents are offering part time teaching jobs for home tutors. Work part time and earn additional income!</p>
+			</div>
+		</div>
+	</div>
+	<!-- how it works -->
+	<div class="row why-home-tuition">
+			<div class="col-lg-5">
+				<hr>
+			</div>
+			<div class="col-lg-2">
+				<header>How It Works?</header>		
+			</div>
+			<div class="col-lg-5">
+				<hr>
+			</div>			
+	</div>
+	<div class="row why-home-tuition student-tutor">
+		<div class="col-md-6">
+			<div>
+				<p  style="text-align: center;">
+					<b>Students/Parents</b>
+				</p>
+			</div>
+			<div>
+				<p><b>1</b>.Tell Us Your Tuition Needs: Just fill few details about your home tuition needs and we will show your requirements to all our tutors.</p>
+			</div>	
+			<div>
+				<p><b>2</b>.Get Free Demo: Interested home tutors will apply for your home tuition and we will arrange a free demo class by our home tutor.</p>
+			</div>
+			<div>
+				<p><b>3</b>.Confirm If You Like: After the demo class, evaluate the teacher and if you are satisfied with tutors teaching abilities then confirm him.</p>
+			</div>			
+		</div>
+		<div class="col-md-6">
+			<div>
+				<p  style="text-align: center;">
+					<b>Tutors</b>
+				</p>
+			</div>
+			<div>
+				<p><b>1</b>.Create Profile: Advertise about yourself by creating your profile. Profiles with more details gets maximum attention from our students and parents.</p>
+			</div>	
+			<div>
+				<p><b>2</b>.Get Students: You can find students by searching tuition needs posted on our website which matches your profile. Apply tuitions relevant to you.</p>
+			</div>
+			<div>
+				<p><b>3</b>.Start Earning: Students/Parents who posted the tuition needs you applied will request a demo class. Give your best in the demo class to get the tuition confirmed.</p>
+			</div>			
+		</div>
+	</div>		
+	<!-- End how it works   -->
+	<!-- Start contact form -->
+	<div  id="contactUs" class="row">
+		<div class="col-lg-4"></div>
+		<div class="col-lg-4 sr-form">
+			
+				<h1>Contact Us </h1>
+				<form id="form" th:action="@{/contactMessage}" method="post" class="needs-validation" novalidate>
+ 			   		<div class="form-group">
+    					<label for="name">Name</label>
+    					<input type="text" class="form-control" id="name" name="name" maxlength="20" required />
+    					<div class="invalid-feedback">can't be empty</div>
+  			   		</div>
+ 			   		<div class="form-group">
+    					<label for="mobile">Mobile Number</label>
+    					<input type="text" class="form-control" id="mobile" name="mobile" maxlength="10" required />
+    					<div class="invalid-feedback">can't be empty</div>
+  			   		</div>
+  			 		<div class="form-group">
+    					<label for="email">Email</label>
+    					<input type="email" class="form-control" id="email" name="email" required />
+    					<div class="invalid-feedback">can't be empty</div>
+  			 		</div> 		
+  			 		<div class="form-group">
+    					<label for="message">Message</label>
+    					<textarea rows=3 class="form-control" id="message" name="message" required ></textarea>
+    					<div class="invalid-feedback">can't be empty</div>
+  			 		</div> 	
+ 	 				<button type="submit" class="btn btn-dark">Submit</button>
+ 	 			
+				</form>
+			
+			</div>
+	</div>
+	<!-- End contact form -->
+	<div th:replace="shared_layout::footer"></div>
+	
+		<script>
+// Example starter JavaScript for disabling form submissions if there are invalid fields
+(function() {
+  'use strict';
+  window.addEventListener('load', function() {
+    // Fetch all the forms we want to apply custom Bootstrap validation styles to
+    var forms = document.getElementsByClassName('needs-validation');
+    // Loop over them and prevent submission
+    var validation = Array.prototype.filter.call(forms, function(form) {
+      form.addEventListener('submit', function(event) {
+        if (form.checkValidity() === false) {
+          event.preventDefault();
+          event.stopPropagation();
+        }
+        form.classList.add('was-validated');
+      }, false);
+    });
+  }, false);
+})();
+</script>
+  </body>
+</html>

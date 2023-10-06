@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+	 <head th:fragment="html_head">
+	   	<!-- Required meta tags wwvc -->
+	   	<meta charset="utf-8">
+	   	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+		<script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+   		<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-Fy6S3B9q64WdZWQUiU+q4/2Lc9npb8tCaSX9FK7E8HnRr0Jz8D6OP9dO5Vg3Q9ct" crossorigin="anonymous"></script>
+	   	<!-- Bootstrap CSS -->
+	   	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css" integrity="sha384-xOolHFLEh07PJGoPkLv1IbcEPTNtaed2xpHsD9ESMhqIYd0nLMwNLD69Npy4HI+N" crossorigin="anonymous">
+		<link rel="stylesheet" href="CSS/ht_stylsheet.css"/>
+		<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5.15.4/css/fontawesome.min.css" integrity="sha384-jLKHWM3JRmfMU0A5x5AkjWkw/EYfGUAGagvnfryNV3F9VqM98XiIH7VBGVoxVSc7" crossorigin="anonymous">
+	   	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta2/css/all.min.css" integrity="sha512-YWzhKL2whUzgiheMoBFwW8CKV4qpHQAEuvilg9FAn5VJUDwKZZxkJNuGM4XkWuk94WCrrwslk8yWNGmY1EduTA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+	   	<title>Home Tutor</title>
+	</head>
+	<body>
+		<div th:fragment="menu">
+			<!-- Nav -->
+			<nav class="navbar navbar-expand-lg navbar-light">
+<!-- 			  <a class="navbar-brand" href="#">HomeTutor</a>
+			  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+			    <span class="navbar-toggler-icon"></span>
+			  </button> -->
+			
+			  <div class="collapse navbar-collapse" id="navbarSupportedContent">
+			    <ul class="navbar-nav mr-auto">
+			      <li class="nav-item active">
+			        <a class="nav-link" href="/" style="color:white; font-weight:bold;"><i class="bi bi-house"></i>Home<!--  <span class="sr-only">(current)</span> --></a>
+			      </li>
+			      <li class="nav-item">
+			        <a class="nav-link" href="studentRegister" style="color:white; font-weight:bold;">I Need A Tutor</a>
+			      </li>
+			      <li class="nav-item">
+			        <a class="nav-link" href="tutorRegister" style="color:white; font-weight:bold;">Join As Tutor</a>
+			      </li>
+			      <li class="nav-item">
+			        <a class="nav-link" href="/Tutor-Tuition" style="color:white; font-weight:bold;">Tutor/Tuition</a>
+			      </li>
+			      <li class="nav-item">
+			        <a class="nav-link" href="#contactUs" style="color:white; font-weight:bold;">Contact US</a>
+			      </li>
+			    </ul>
+				   
+				 <ul class="navbar-nav mr-4"> 
+		      	<!-- <li class="nav-item dropdown">
+		        <a class="nav-link dropdown-toggle" style="color:white; font-weight:bold;" href="#" role="button" data-toggle="dropdown" aria-expanded="false">
+		         SignUp
+		        </a>
+		        <div class="dropdown-menu">
+		          <a class="dropdown-item" href="tutorRegister">As Tutors</a>
+		          <a class="dropdown-item" href="studentRegister">As students</a>
+		        </div>
+		      </li> -->
+		      	<li class="nav-item">
+			        <a class="nav-link" href="/login" style="color:white; font-weight:bold;">Login</a>
+			      </li>	
+		      </ul>
+		   			
+			  </div>
+			</nav>
+			<!-- End Nav -->
+	
+		</div>
+		<div class="row" th:fragment="logo_menu">
+			<div class="col-lg-4">
+			
+			</div>
+			<div class="col-lg-6">
+				<a href="/">
+					<img src="Image/logo2.jpeg">				
+				</a>
+				<span>Learn & Achieve!!</span>
+				<h5>We Help Students and Tutors To Find Each Other</h5>
+			</div>
+		</div>
+			<div th:fragment="footer">
+
+<div class="container my-5" style="max-width: 100%;">
+  <!-- Footer -->
+  <footer
+          class="text-center text-lg-start text-white"
+          style="background-color: #45526e"
+          >
+    <!-- Grid container -->
+    <div class="container p-4 pb-0">
+      <!-- Section: Links -->
+      <section class="">
+        <!--Grid row-->
+        <div class="row">
+          <!-- Grid column -->
+          <div class="col-md-3 col-lg-3 col-xl-3 mx-auto mt-3">
+            <h6 class="text-uppercase mb-4 font-weight-bold">
+             Home Tutor
+            </h6>
+            <p>
+              We help Teachers and Students to Find Each Other 
+            </p>
+          </div>
+          <!-- Grid column -->
+
+          <hr class="w-100 clearfix d-md-none" />
+
+         <!--  <!-- Grid column 
+          <div class="col-md-2 col-lg-2 col-xl-2 mx-auto mt-3">
+            <h6 class="text-uppercase mb-4 font-weight-bold">Products</h6>
+            <p>
+              <a class="text-white">MDBootstrap</a>
+            </p>
+            <p>
+              <a class="text-white">MDWordPress</a>
+            </p>
+            <p>
+              <a class="text-white">BrandFlow</a>
+            </p>
+            <p>
+              <a class="text-white">Bootstrap Angular</a>
+            </p>
+          </div>
+          Grid column -->
+
+          <hr class="w-100 clearfix d-md-none" />
+
+          <!-- Grid column -->
+          <div class="col-md-3 col-lg-2 col-xl-2 mx-auto mt-3">
+            <h6 class="text-uppercase mb-4 font-weight-bold">
+              Useful links
+            </h6>
+            <p>
+              <a class="text-white">Your Account</a>
+            </p>
+            <p>
+              <a class="text-white">Become an Affiliate</a>
+            </p>
+            <p>
+              <a class="text-white">Shipping Rates</a>
+            </p>
+            <p>
+              <a class="text-white">Help</a>
+            </p>
+          </div>
+
+          <!-- Grid column -->
+          <hr class="w-100 clearfix d-md-none" />
+
+          <!-- Grid column -->
+          <div class="col-md-4 col-lg-3 col-xl-3 mx-auto mt-3">
+            <h6 class="text-uppercase mb-4 font-weight-bold">Contact</h6>
+            <p><i class="fas fa-home mr-3"></i> India,Ranchi, 834008</p>
+            <p><i class="fas fa-envelope mr-3"></i> hometutor@gmail.com</p>
+            <p><i class="fas fa-phone mr-3"></i> +91 9523134353</p>
+            <p><i class="fas fa-print mr-3"></i> +91 9874563210</p>
+          </div>
+          <!-- Grid column -->
+        </div>
+        <!--Grid row-->
+      </section>
+      <!-- Section: Links -->
+
+      <hr class="my-3">
+
+      <!-- Section: Copyright -->
+      <section class="p-3 pt-0">
+        <div class="row d-flex align-items-center">
+          <!-- Grid column -->
+          <div class="col-md-7 col-lg-8 text-center text-md-start">
+            <!-- Copyright -->
+            <div class="p-3">
+              © Copyright <a href="/" class="text-white">Home Tutor</a> All rights reserved
+            </div>
+            <!-- Copyright -->
+          </div>
+          <!-- Grid column -->
+
+          <!-- Grid column -->
+          <div class="col-md-5 col-lg-4 ml-lg-0 text-center text-md-end">
+            <!-- Facebook -->
+            <a
+               class="btn btn-outline-light btn-floating m-1 text-white"
+               
+               role="button"
+               ><i class="fab fa-facebook-f"></i
+              ></a>
+
+            <!-- Twitter -->
+            <a
+               class="btn btn-outline-light btn-floating m-1 text-white"
+               
+               role="button"
+               ><i class="fab fa-twitter"></i
+              ></a>
+
+            <!-- Google -->
+            <a
+               class="btn btn-outline-light btn-floating m-1 text-white"
+     
+               role="button"
+               ><i class="fab fa-google"></i
+              ></a>
+
+            <!-- Instagram -->
+            <a
+               class="btn btn-outline-light btn-floating m-1 text-white"
+               
+               role="button"
+               ><i class="fab fa-instagram"></i
+              ></a>
+          </div>
+          <!-- Grid column -->
+        </div>
+      </section>
+      <!-- Section: Copyright -->
+    </div>
+    <!-- Grid container -->
+  </footer>
+  <!-- Footer -->
+</div>
+
+			</div>
+<!-- 			<footer>
+				<small>© Copyright <a href="#">Home Tutor</a> All rights reserved</small>
+			</footer> -->
+
+	</body>
+</html>

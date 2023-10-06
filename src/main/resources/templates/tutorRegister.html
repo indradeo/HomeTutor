@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head th:replace="shared_layout::html_head"/>
+<head>
+	<link rel="stylesheet" href="CSS/indexPage.css"  />
+</head>
+<body>
+	<div th:replace="shared_layout :: menu"></div>
+		<div class="row">
+		<div class="col-lg-4">
+		
+		</div>
+		<div class="col-lg-6">
+			<a href="/">
+				<img src="Image/logo2.jpeg">				
+			</a>
+			<span>Learn & Achieve!!</span>
+			<h5>We Help Students and Tutors To Find Each Other</h5>
+		</div>
+	</div>
+	<div class="container">
+		<div class="row apna-class">
+			<div class="col-lg-6">
+			<!-- 	<div th:if="${session.message}"
+				th:classappend="${session.message}" class="alert alert-success" role="alert">
+					<p th:text="${session.message}"></p>
+					<th:block th:text="${#session.removeAttribute('message')}"></th:block>
+				</div> -->
+				<div class="row">
+					<h4>Find Home Tuition</h4>
+				</div>
+				<div class="row">
+					<img class="home-tuiton-img" src="Image/home-tuition.png"/>
+				</div>
+				<div class="row apna-class-h4">
+					<h4>You focus on teaching, We focus on finding students for you.</h4>
+				</div>
+
+			</div>	
+			<div class="col-lg-6 sr-form">
+				<form th:action="@{/saveTutor}" method="POST" class="needs-validation" novalidate>
+					<h4>Register As Tutor</h4>
+					 <h5 style="color:red" th:text="${message}"></h5>
+					<div class="row">
+						<div class="col-mg-6  tr-form-input-fields">
+							<div class="form-group">
+	    			   			<input type="text" class="form-control" id="name" name="name" placeholder="Enter name" required/>
+	  			   				<div class="invalid-feedback">can't be empty</div>
+	  			   			</div>
+	  			   			
+	  			   			<div class="form-group">
+		    					<input type="text" class="form-control" id="course" name="course" placeholder="enter course you teach" required/>
+		  			 			<div class="invalid-feedback">can't be empty</div>
+		  			 		</div>
+		  			 		<div class="form-group">
+		    					<input type="text" class="form-control" id="subject" name="subject" placeholder="enter subject you teach" required/>
+		  			 			<div class="invalid-feedback">can't be empty</div>
+		  			 		</div>
+	  			   			<div class="form-group">
+		    					<input type="tel" class="form-control" id="mobile" name="mobile" maxlength="10" minlength="10" placeholder="Enter mobile name" required/>
+		  			   		    <div class="invalid-feedback">can't be empty</div>
+		  			   		</div>
+				  			<div class="form-group">
+		    					<input type="email" class="form-control" id="email" name="email" placeholder="enter email" required/>
+		  			 		</div>
+		  					<div class="form-group">
+			  			   		<div class="form-check-inline form-check">			   				
+		  			   				<input type="radio" class="form-check-input" id="gender" name="gender" value="male" required/>
+		  			   				<label for="gender" class="form-check-label">Male</label>
+		  			   			</div>
+			  			   		<div class="form-check-inline form-check">
+		  			   				<input type="radio" class="form-check-input" id="gender" name="gender" value="female" required />
+		  			   				<label for="gender" class="form-check-label">Female</label>
+		  			   			</div> 
+		  			   		</div>
+						</div>
+						<div class="col-mg-6  tr-form-input-fields">
+
+		  			   		<div class="form-group"> 
+			    				<input type="text" class="form-control" id="area" name="area" placeholder="Enter area" required />
+			  				</div> 
+			  				<div class="form-group"> 
+			    				<input type="text" class="form-control" id="pincode" name="pincode" placeholder="Enter Pincode" maxlength="6" minlength="6" required/>
+			  				</div> 
+		  			   		<div class="form-group"> 
+			    				<input type="password" class="form-control" id="password" name="password" placeholder="Enter password" required/>
+			  				</div>  			   						   		
+						</div>
+					</div> 			
+ 	 				<button type="submit" class="btn btn-dark">Submit</button>
+ 	 				<p style="margin-top:20px;"><a href="/login" class="Login-or-register-link">Already have a account?</a> </p>
+				</form>
+			</div>	
+		</div>
+	</div>
+	<div th:replace="shared_layout::footer"></div>
+	
+	<script>
+// Example starter JavaScript for disabling form submissions if there are invalid fields
+(function() {
+  'use strict';
+  window.addEventListener('load', function() {
+    // Fetch all the forms we want to apply custom Bootstrap validation styles to
+    var forms = document.getElementsByClassName('needs-validation');
+    // Loop over them and prevent submission
+    var validation = Array.prototype.filter.call(forms, function(form) {
+      form.addEventListener('submit', function(event) {
+        if (form.checkValidity() === false) {
+          event.preventDefault();
+          event.stopPropagation();
+        }
+        form.classList.add('was-validated');
+      }, false);
+    });
+  }, false);
+})();
+</script>
+</body>
+</html>

@@ -1,0 +1,94 @@
+@charset "ISO-8859-1";
+
+body{
+	margin:16px;
+	background:linear-gradient(to bottom,#f0f0f0 0,#f0f0f0 47%,#dedede 100%);
+}
+
+/* input{
+	
+	background-color: yellow;
+
+} */
+nav{
+	background-color: #3d4974;
+	color: #6f708e;
+}
+
+nav ul li a:hover {
+    color: #3d4974 !important;
+    background: white;
+}
+nav ul li div a:hover{
+	
+	background-color: red;
+	color:#c68100;
+}
+
+img{
+	margin-top:15px;
+    width: 189px;
+    height: 80px;
+}
+
+.search-container{
+	background:white;
+	padding:20px;
+	margin-left:80px;
+	margin-bottom:40px;
+	margin-top:20px;
+}
+
+.why-home-tuition hr{
+	margin-top:15px;
+	background-color:#c68100;
+}
+
+.student-tutor p{
+	margin-top: 21px;
+    margin-bottom: 2px;
+    margin-left: 50px;
+	margin-right:50px;
+}
+
+.why-home-tuition header{
+	
+	width:160px;
+	text-align:center;
+	border:2px solid;
+	color:#910000;
+}
+
+
+
+/* .footer{
+
+	color:white;
+	height:55px;
+	background-color:#c68100 ;
+	margin-top:2px;
+} */
+/* footer small{
+	margin-top:20px;
+	padding-left:20px;
+	color:black;
+}
+footer small a{
+	text-decoration: none;
+	color:white;
+	
+}
+footer small a:hover{
+	text-decoration: none;
+	color:white;
+} */
+
+/* .contact-us{
+	
+	color:white;
+	height:95px;
+	background-color:#c68100 ;
+} */
+
+
+

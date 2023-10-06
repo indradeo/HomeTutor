@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html xmlns:th="www.thymeleaf.org">
+<head th:replace="shared_layout :: html_head" />
+<head>
+	<link rel="stylesheet" href="CSS/indexPage.css"  />
+	<script defer src="../static/JavaScript/StudentFormValidation.js"></script>
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+	<style>
+		.noRecord{
+			text-align: center;
+    		color: rgb(255, 128, 0);
+   			background-color: white;
+    		margin-top: 20px;
+    		padding: 156px;
+		}
+		/*.message{
+
+		}*/
+	</style>
+</head>
+<body>
+	<div th:replace="shared_layout::menu"></div>
+	<div th:replace="shared_layout::logo_menu"></div>
+	<!--<div id="top"></div>-->
+	<div class="container">
+		<div class="row">
+			<div class="col-lg-2">
+				
+			
+			</div>
+			<div class="col-lg-10">	
+				
+				<div class="row">
+					<div th:each="StudentData:${data}">	
+					<div class="card w-100 m-2">
+					  <div class="card-body">
+					  <div class="text-center">
+                			<img src="https://via.placeholder.com/150" alt="User Profile Picture" class="rounded-circle mb-1">
+                			<h4 th:text="${StudentData.name}" ></h4>
+                	  </div>		
+					   		<small>Sex&nbsp;&nbsp;<small class="card-text" th:text="${StudentData.gender}"></small></small>&nbsp;&nbsp;&nbsp;&nbsp;
+					    	<small>Area&nbsp;&nbsp;<small class="card-text" th:text="${StudentData.area}"></small>&nbsp;&nbsp;&nbsp;&nbsp;
+					    	<small>pincode&nbsp;&nbsp;<small class="card-text" th:text="${StudentData.pincode}"></small></small></Small>
+					    	<p>Moblie&nbsp;&nbsp;<small class="card-text">+91 XXX XXX XXX </small></p>
+					    	<p>Email&nbsp;&nbsp;<small class="card-text">###@gmail.com </small></p>
+					     
+					       <a th:href="@{'/studentDetails/'+${StudentData.id}}" class="btn btn-primary">View Profile</a>
+					  </div>
+					  </div>
+				  </div>	
+			      </div>
+				</div>	
+			</div>
+		</div>
+	</div>
+<!--	<div class="noRecord">
+		<h4 class="message"><p th:text="${message}"></p></h4>
+	</div> -->
+	<!--<a id="scrollUp" href="#top" style="position: fixed; z-index: 2147483647; display: block;"><i class="common-sm-sprite scrollup-arrow"></i><br>TOP</a>-->
+	<div th:replace="shared_layout::footer"></div>
+</body>
+</html>
